@@ -29,25 +29,21 @@ Organiza en un único lugar las tres unidades trabajadas durante el módulo: ide
 
 ```mermaid
 flowchart TD
-    DEV["👨‍💻 Alejandro De Mendoza\nDesarrollo individual"] --> U02["📁 unidad-02/"]
-    DEV --> U03["📁 unidad-03/"]
-    DEV --> U04["📁 unidad-04/"]
-    DEV --> FORO["📁 foro/"]
+    DEV["👨‍💻 Alejandro De Mendoza\nDesarrollo individual"] --> FU02 & FU03 & FU04 & FFORO
 
-    U02 --> A1["Desarrollo_Indentificacion_Atributos_Calidad.docx"]
-    U02 --> A2["Desarrollo_Indentificacion_Atributos_Calidad_grupo_mad_7.docx"]
+    subgraph FUENTES["📁 fuentes-originales/  —  material fuente no-PDF"]
+        FU02["unidad-02/\n.docx · .png"]
+        FU03["unidad-03/\n.docx · .png · .archimate · .drawio"]
+        FU04["unidad-04/\n.docx · .drawio · .jpeg"]
+        FFORO["foro/\n.png"]
+    end
 
-    U03 --> B1["TradeNova_C4.archimate"]
-    U03 --> B2["Desarrollo_U3_DisenoArqSoft_Final_Alejandro_De_Mendoza.docx"]
-    U03 --> B3["01 - 04 · Diagramas C4 .png"]
+    FU02 -- "PDF" --> U02["📁 unidad-02/\nentregas en PDF"]
+    FU03 -- "PDF" --> U03["📁 unidad-03/\nentregas en PDF"]
+    FU04 -- "PDF" --> U04["📁 unidad-04/\nentregas en PDF"]
+    FFORO -- "PDF" --> FORO["📁 foro/\nentregas en PDF"]
 
-    U04 --> C1["ADD_SmartRoad_U4.docx"]
-    U04 --> C2["LF_U4.docx"]
-    U04 --> C3["c4-model-tradenova.drawio"]
-
-    FORO --> D1["Infografia de Alejandro De Mendoza.pdf"]
-
-    A1 & A2 & B1 & B2 & B3 & C1 & C2 & C3 & D1 --> REPO[("🗄️ diseno-arquitectonico-software\nGitHub · AlejoTechEngineer")]
+    U02 & U03 & U04 & FORO --> REPO[("🗄️ diseno-arquitectonico-software\nGitHub · AlejoTechEngineer")]
 ```
 
 ---
@@ -61,40 +57,47 @@ diseno-arquitectonico-software/
 ├── .gitignore
 │
 ├── unidad-02/                                                         # Lab No. 1 — Atributos de Calidad
-│   ├── Desarrollo_Indentificacion_Atributos_Calidad.docx              # Entrega individual
-│   ├── Desarrollo_Indentificacion_Atributos_Calidad.pdf
-│   ├── Desarrollo_Indentificacion_Atributos_Calidad_grupo_mad_7.docx  # Entrega grupal (MAD-7)
-│   ├── Desarrollo_Indentificacion_Atributos_Calidad_grupo_mad_7.pdf
-│   ├── 1.png
-│   └── Comprobante de entrega de la atividad desarrollada.png
+│   ├── README.md
+│   ├── Desarrollo_Indentificacion_Atributos_Calidad.pdf               # Entrega individual
+│   └── Desarrollo_Indentificacion_Atributos_Calidad_grupo_mad_7.pdf   # Entrega grupal (MAD-7)
 │
 ├── unidad-03/                                                         # Lab No. 2 — Modelo C4 TradeNova
 │   ├── README.md                                                      # Documentación del modelo C4
-│   ├── TradeNova_C4.archimate                                         # Modelo ArchiMate (fuente)
-│   ├── 01 - Diagrama de Contexto.png
-│   ├── 02 - Diagrama de Contenedores.png
-│   ├── 03 - Diagrama de Componentes.png
-│   ├── 04 - Diagrama de Código.png
-│   ├── Desarrollo_U3_DisenoArqSoft_Final_Alejandro_De_Mendoza.docx
-│   ├── Desarrollo_U3_DisenoArqSoft_Final_Alejandro_De_Mendoza.pdf
-│   ├── ActividadFormativa_U3.docx
 │   ├── ActividadFormativa_U3.pdf
-│   ├── TradeNova_Informe_C4_Completo.docx
+│   ├── Desarrollo_U3_DisenoArqSoft_Final_Alejandro_De_Mendoza.pdf
 │   └── TradeNova_Informe_C4_Completo.pdf
 │
 ├── unidad-04/                                                         # Lab No. 3 — ADD SmartRoad
-│   ├── ADD_SmartRoad_U4.docx                                          # Architecture Decision Document
-│   ├── LF_U4.docx
-│   ├── LF_U4.pdf
-│   ├── ActividadSumativa_U4.docx
+│   ├── README.md
 │   ├── ActividadSumativa_U4.pdf
-│   ├── c4-model-tradenova.drawio
-│   ├── Unidad3_C4_TradeNova-copia-apa.docx
-│   └── Imagen soporte entrega.jpeg
+│   ├── ADD_SmartRoad_U4.pdf                                           # Architecture Decision Document
+│   ├── LF_U4.pdf
+│   └── Unidad3_C4_TradeNova-copia-apa.pdf
 │
-└── foro/                                                              # Actividad de foro
-    ├── Infografia de Alejandro De Mendoza.pdf
-    └── Infografia de Alejandro De Mendoza.png
+├── foro/                                                              # Actividad de foro
+│   └── Infografia de Alejandro De Mendoza.pdf
+│
+└── fuentes-originales/                                                # Material fuente no-PDF
+    ├── unidad-02/
+    │   ├── Desarrollo_Indentificacion_Atributos_Calidad.docx
+    │   ├── Desarrollo_Indentificacion_Atributos_Calidad_grupo_mad_7.docx
+    │   ├── 1.png
+    │   └── Comprobante de entrega de la atividad desarrollada.png
+    ├── unidad-03/
+    │   ├── TradeNova_C4.archimate                                     # Modelo ArchiMate (fuente)
+    │   ├── ActividadFormativa_U3.docx
+    │   ├── Desarrollo_U3_DisenoArqSoft_Final_Alejandro_De_Mendoza.docx
+    │   ├── TradeNova_Informe_C4_Completo.docx
+    │   └── 01-04 · Diagramas C4 .png
+    ├── unidad-04/
+    │   ├── ADD_SmartRoad_U4.docx
+    │   ├── ActividadSumativa_U4.docx
+    │   ├── LF_U4.docx
+    │   ├── Unidad3_C4_TradeNova-copia-apa.docx
+    │   ├── c4-model-tradenova.drawio
+    │   └── Imagen soporte entrega.jpeg
+    └── foro/
+        └── Infografia de Alejandro De Mendoza.png
 ```
 
 ---
