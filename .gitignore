@@ -1,27 +1,32 @@
 # Claude Code workspace settings
+.claude
 .claude/
 
-# Backups de Archi (ArchiMate tool)
+# Backups de herramientas
+*.bak
 *.archimate.bak
+
+# Logs
+*.log
+npm-debug.log*
 
 # Archivos temporales de Microsoft Office
 ~$*
 *.tmp
+
+# Windows
 Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
 
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Windows
-desktop.ini
-$RECYCLE.BIN/
-
 # Node.js
 node_modules/
-npm-debug.log*
 
-# JetBrains / VS Code cache
+# Editores
 .idea/
-.vscode/settings.json
+.vscode/
